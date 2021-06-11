@@ -1,0 +1,130 @@
+body {
+  position: fixed;
+  top: 0px;
+  height: 0px;
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: Monospace;
+  font-size: 13px;
+  line-height: 24px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+}
+
+#loading-progress {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  transform: translate(-50%, -50%);
+}
+
+#container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: none;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -webkit-touch-callout: none;
+  width: 100%;
+  height: 100%;
+}
+
+.hotspot {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: #00f;
+}
+
+.info-panel {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  width: 100%;
+}
+
+.close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 20px;
+  right: 20px;
+  border: solid 2px red;
+}
+
+#arrowsControlls {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+#arrowsControlls i {
+  font-size: 45pt;
+  background-color: grey;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+#arrowsControlls i:hover {
+  opacity: 0.9
+}
+
+#arrowsControlls .arrow_drop_up {
+  position: absolute;
+  bottom: 74px;
+  right: 67px;
+}
+
+#orientation-alert {
+    display: none;
+}
+
+@media screen and (orientation:portrait) and (max-width: 768px) {
+    #orientation-alert {
+      display: block;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(6px);
+      z-index: 1999;
+    }
+
+    #orientation-alert > p {
+      background: white;
+      border-radius: 5px;
+      margin: 20%;
+      padding: 32px;
+      color: #3a3a3a;
+      font-size: 1em;
+      text-align: center;
+    }
+}
