@@ -1,3 +1,18 @@
+iframe {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh; /* For 100% screen height */
+  width:  100vw; /* For 100% screen width */
+  border: none;
+}
+iframe {
+  display: block;
+  border: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
 body {
   position: fixed;
   top: 0px;
@@ -247,21 +262,6 @@ canvas {
 
 #help-panel .panel-body p {
   text-align: left;
-}
-
-iframe {
-  margin: 0px;
-  padding: 0px;
-  height: 100vh; /* For 100% screen height */
-  width:  100vw; /* For 100% screen width */
-  border: none;
-}
-
-iframe {
-  display: block;
-  border: none;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 @media screen and (orientation:portrait) and (max-width: 768px) {

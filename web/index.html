@@ -165,8 +165,6 @@
 					<div class="black active"></div>
 					<div class="white"></div>
 					<div class="grey"></div>
-					<div class="green"></div>
-					<div class="blue"></div>
 					<div class="purple"></div>
 				</div>
 				<a href="https://laneeight.com/" target="_blank"> <img
@@ -235,6 +233,7 @@
 		<img class="close" src="img/close.png"></img>
 	</div>
 	<div id="water-vending" class="info-panel">
+		<img class="content" src="img/water-vending.png"></img>
 		<img class="close" src="img/close.png"></img>
 	</div>
 	<div id="food-paper" class="info-panel">
@@ -307,7 +306,6 @@
 		<!-- <img class="close" src="img/close.png"></img> -->
 	</div>
 	<div id="game-ranking" class="info-panel">
-		<!-- <img src="img/game-ranking.png"></img> -->
 		<div>
 		<iframe   allowScriptAccess=“always” class="content" src="https://vitasoymain.web.app/leaderboard" ></iframe>
 		<img class="close" src="img/close.png"></img>
@@ -355,7 +353,7 @@
 			spriteslider.slider = document.getElementById('spriteslider');
 			spriteslider.sprite = document.getElementById('spritetarget');
 			spriteslider.spritesize = 650;
-			spriteslider.spritecount = 36;
+			spriteslider.spritecount = 24;
 			spriteslider.pixelsperincrement = 25;
 			spriteslider.multiplier = spriteslider.lastmultiplier = 0;
 
@@ -449,7 +447,7 @@
 
 		function openFullScreen() {
 
-			var elem = $("#container")[0];
+			var elem = document.documentElement;
 
 			if (elem.requestFullscreen) {
 				elem.requestFullscreen();
@@ -474,8 +472,9 @@
 			}
 		}
 
+		
 		function logout() {
-			location.replace("https://vitasoymain.web.app/logout");
+			location.replace("https://vitawater.vitavitasoy.com/logout");
 		}
 
 		$(document).bind('webkitfullscreenchange mozfullscreenchange fullscreenchange', function(e) {

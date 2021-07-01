@@ -10,6 +10,13 @@ function launchGame(name) {
     if(name=='photo-hunter'){
         var gameurl="https://vitaphotohunt.web.app?"+uid;
     }
+    if(name=='game-ranking'){
+        var gameurl="https://vitawater.vitavitasoy.com/leaderboard?"+uid;
+    }
+    if(name=='game-time'){
+        var gameurl="https://vitawater.vitavitasoy.com";
+    }
+    
      console.log("params", uid);
      window.open(gameurl, "_blank", "width="+screen.availWidth+",height="+screen.availHeight);
  

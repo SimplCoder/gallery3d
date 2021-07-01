@@ -23,7 +23,7 @@ var HOTSPOTS = {
         position: {x: 8.88, y: 13.76, z: -76.88},
         direction: {x: 0, y: 0, z: 1.0},
         action: 'move-open',
-        targetPosition: {x: 5.88, y: 10.0, z: -117.38},
+        targetPosition: {x: 3, y: 13.0, z: -99.38},
         icon: 'tag-video.png'
     },
 
@@ -89,7 +89,7 @@ var HOTSPOTS = {
         direction: {x: -1.0, y: 0.0, z: 0.0},
         action: 'move-link',
         link: 'https://www.milmill.hk',
-        targetPosition: {x: 120.06, y: 10, z: -105.83},
+        targetPosition: {x: 120.06, y: 13, z: -100.83},
         icon: 'tag-milmill.png'
     },
 
@@ -107,7 +107,7 @@ var HOTSPOTS = {
         position: {x: 137.04, y: 18.35, z: -103.75},
         direction: {x: 1.0, y: 0.0, z: 0.0},
         action: 'move',
-        targetPosition: {x: 114.04, y: 10.05, z: -117.75},
+        targetPosition: {x: 117.04, y: 13.05, z: -110.75},
         icon: 'tag-info.png'
     },
 
@@ -124,7 +124,7 @@ var HOTSPOTS = {
         index: '7-1',
         position: {x: 84.43, y: 15.28, z: -176.8},
         direction: {x: 0.0, y: 0.0, z: -1.0},
-        targetPosition: {x: 70.50, y: 10.0, z: -138.98},
+        targetPosition: {x: 72.50, y: 13.0, z: -155.98},
         action: 'move',
         icon: 'tag-info.png'
     },
@@ -188,7 +188,7 @@ var HOTSPOTS = {
         index: '10-1',
         position: {x: -165.75, y: 10.13, z: -97.74},
         direction: {x: 0.0, y: 0.0, z: 1.0},
-        action: 'move-open',
+        action: 'game',
         targetPosition: {x: -153.75, y: 10.63, z: -138.74},
         icon: 'tag-cup.png'
     },
@@ -221,7 +221,7 @@ var HOTSPOTS = {
         index: '10-5',
         position: {x: -142.41, y: 15.01, z: -97.62},
         direction: {x: 0.0, y: 0.0, z: 1.0},
-        action: 'move-open',
+        action: 'game',
         targetPosition: {x: -158.41, y: 15.01, z: -118.62},
         icon: 'tag-T_C.png'
     }
