@@ -12,8 +12,7 @@ var HOTSPOTS = {
         index: '3-1',
         position: {x: -44, y: 6, z: -83},
         direction: {x: -1, y: 0, z: 0},
-        action: 'move-link',
-        link: 'https://www.vitavitasoy.com/tc/sustainability',
+        action: 'move-open',
         targetPosition: {x: -15, y: 10.0, z: -100.38},
         icon: 'tag-link.png'
     },
@@ -53,15 +52,27 @@ var HOTSPOTS = {
         targetPosition: {x: 59.7, y: 10.00, z: -59.05},
         icon: 'tag-video.png'
     },
-
-    'shoes': {
-        index: '5-1',
-        position: {x: 82.41, y: 13.03, z: -84.08},
+	
+	    'to-part1': {
+        index: 'exit-1',
+        position: {x: 85, y: 11, z: -65.08},
         direction: {x: 1.0, y: 0.0, z: 0.0},
-        action: 'move-open',
+        action: 'exit',
         targetPosition: {x: 56.41, y: 10, z: -98.08},
-        icon: 'tag-info.png'
+        icon: 'tag-exit.png',
+        size: 10
     },
+
+    'to-part0': {
+        index: 'exit-1',
+        position: {x: 105, y: 11, z: -65.08},
+        direction: {x: -1.0, y: 0.0, z: 0.0},
+        action: 'exit',
+        targetPosition: {x: 56.41, y: 10, z: -98.08},
+        icon: 'tag-exit.png',
+        size: 10
+    },
+
 
     'video': {
         index: '5-2',
@@ -77,21 +88,19 @@ var HOTSPOTS = {
         position: {x: 133.40, y: 15.96, z: -51.58},
         direction: {x: 0.707, y: 0.0, z: 0.707},
         targetPosition: {x: 113.40, y: 10, z: -71.58},
-        action: 'move-link',
-		link: 'https://www.vitavitasoy.com/tc/sustainability',
+        action: 'move-open',
         icon: 'tag-link.png'
 
     },
 
-    'water-vending': {
+    /* 'water-vending': {
         index: '6-1',
         position: {x: 94.06, y: 16.82, z: -107.83},
         direction: {x: -1.0, y: 0.0, z: 0.0},
-        action: 'move-link',
-        link: 'https://www.milmill.hk',
+        action: 'move-open',
         targetPosition: {x: 120.06, y: 13, z: -100.83},
         icon: 'tag-milmill.png'
-    },
+    }, */
 
     // 'recycle-wall': {
     //     index: '6-2',
@@ -169,9 +178,8 @@ var HOTSPOTS = {
         index: '9-1',
         position: {x: -28.76, y: 17.24, z: -193.44},
         direction: {x: 0.0, y: 0.1, z: -0.92},
-        action: 'move-link',
+        action: 'move-open',
         targetPosition: {x: -23.76, y: 10, z: -163.44},
-        link: 'https://www.hktvmall.com/hktv/zh/search_a?keyword=維他蒸餾水',
         icon: 'tag-shopping.png'
     },
 
@@ -184,37 +192,13 @@ var HOTSPOTS = {
         icon: 'tag-enterance.png'
     },
 
-    'game-ranking': {
-        index: '10-1',
-        position: {x: -165.75, y: 10.13, z: -97.74},
-        direction: {x: 0.0, y: 0.0, z: 1.0},
-        action: 'game',
-        targetPosition: {x: -153.75, y: 10.63, z: -138.74},
-        icon: 'tag-cup.png'
-    },
-
     'car-racing': {
         index: '10-2',
-        position: {x: -117.92, y: 5.0, z: -116.99},
+        position: {x: -117.92, y: 8.0, z: -116.99},
         direction: {x: 0.0, y: 0.0, z: 1.0},
         action: 'game',
-        icon: 'tag-game.png'
-    },
-
-    'running-game': {
-        index: '10-3',
-        position: {x: -181.73, y: 7.0, z: -132.47},
-        direction: {x: 0.0, y: 0.0, z: 1.0},
-        action: 'game',
-        icon: 'tag-game.png'
-    },
-
-    'photo-hunter': {
-        index: '10-4',
-        position: {x: -166.72, y: 2.37, z: -152},
-        direction: {x: -1.0, y: 0.0, z: 0.0},
-        action: 'game',
-        icon: 'tag-game.png'
+        icon: 'coming_soon.png',
+		size: 8
     },
 
     'game-time': {
@@ -224,7 +208,8 @@ var HOTSPOTS = {
         action: 'game',
         targetPosition: {x: -158.41, y: 15.01, z: -118.62},
         icon: 'tag-T_C.png'
-    }
+    },
+
 };
 
 var CHECKPOINTS = [
@@ -255,7 +240,7 @@ var ANIMATION_OBJECTS = [
     },
     {
         fileName: 'shoe_rotation_20210520.glb',
-        position: [-182.8, 2.5, -133.7],
+        position: [-182.8, 6, -133.7],
         rotaion: [0.0, 1.9, 0],
         scale: [1, 1, 1]
     },
@@ -267,4 +252,18 @@ var ANIMATION_OBJECTS = [
     }
 ];
 
-window.TOTAL_ASSET_COUNTS = 152;
+var CAMERA_DEFAULT_HEIGHT = 10;
+var CAMERA_INIT_POSITIONS = [
+    [80, CAMERA_DEFAULT_HEIGHT, -65],
+    [112, CAMERA_DEFAULT_HEIGHT, -65],
+    [0, CAMERA_DEFAULT_HEIGHT, 145]
+];
+var CAMERA_INIT_DIRECTIONS = [
+    [-1, 0, 0],
+    [0, 0, -1],
+    [0, 0, 0]
+];
+
+var ENV_MODELS = ['part1.glb', 'part2.glb'];
+
+window.TOTAL_ASSET_COUNTS = 105;

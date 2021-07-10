@@ -36,20 +36,6 @@
   display: none;
 }
 
-@media only screen and (max-width: 850px) {
-  .shoe-container {
-    transform-origin: center;
-    transform: scale(0.5);
-    z-index: 3;
-  }
-  .mobile {
-    display: block;
-  }
-  .desktop {
-    display: none;
-  }
-}
-
 #spritetarget.black {
   background-image: url("img/panel_4/black.png");
 }
@@ -112,7 +98,8 @@
 }
 
 .reference {
-  width: 100%;
+  width: 90%;
+  margin-left: 5%;
   height: auto;
 }
 
@@ -129,7 +116,8 @@
 
 .text-container {
   position: absolute;
-  width: 100%;
+  width: 90%;
+  margin-left: 5%;
   height: 100%;
   .text-inner-container {
     width: 100%;
@@ -138,5 +126,27 @@
     * {
       position: absolute;
     }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .shoe-container {
+    transform-origin: center;
+    transform: scale(0.5);
+    z-index: 3;
+  }
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+  .text-container {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .reference {
+    width: 80%;
+    margin-left: 10%;
   }
 }
